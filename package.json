@@ -1,0 +1,13 @@
+{
+  "devDependencies": {
+    "@types/jasmine": "^5.1.9",
+    "@types/jest": "^30.0.0",
+    "jasmine": "^5.10.0",
+    "jasmine-ts": "^0.4.0",
+    "typescript": "^5.9.2"
+  },
+  "scripts": {
+    "test": "jasmine",
+    "build": "tsc"
+  }
+}
