@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.LinkedList = void 0;
 class LinkedList {
     head;
     constructor() {
@@ -16,7 +17,27 @@ class LinkedList {
             curr.next = new ListNode(value);
         }
     }
+    reverse(node) {
+        if (!node.next) {
+            this.head = node;
+            return;
+        }
+        this.reverse(node.next);
+        const temp = node.next;
+        temp.next = node;
+        node.next = null;
+    }
+    printList() {
+        const list = [];
+        let curr = this.head;
+        while (curr) {
+            list.push(curr.value);
+            curr = curr.next;
+        }
+        return list;
+    }
 }
+exports.LinkedList = LinkedList;
 class ListNode {
     next;
     value;
@@ -25,4 +46,4 @@ class ListNode {
         this.value = value;
     }
 }
-//# sourceMappingURL=implementation.js.map
+//# sourceMappingURL=linkedlist.js.map
