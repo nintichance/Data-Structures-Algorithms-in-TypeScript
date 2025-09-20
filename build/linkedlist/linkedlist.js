@@ -27,9 +27,23 @@ class LinkedList {
         temp.next = node;
         node.next = null;
     }
-    printList() {
+    intersectingLinkedList(headB) {
+        const set = new Set();
+        let headA = this.head;
+        while (headB) {
+            set.add(headB);
+            headB = headB.next;
+        }
+        while (headA) {
+            if (set.has(headA))
+                return headA;
+            headA = headA.next;
+        }
+        return null;
+    }
+    printList(head) {
         const list = [];
-        let curr = this.head;
+        let curr = head;
         while (curr) {
             list.push(curr.value);
             curr = curr.next;

@@ -3,7 +3,8 @@ export declare class LinkedList {
     constructor();
     append(value: number): void;
     reverse(node: ListNode | null): void;
-    printList(): number[];
+    intersectingLinkedList(headB: ListNode | null): ListNode | null;
+    printList(head: ListNode | null): number[];
 }
 declare class ListNode {
     next: ListNode | null;
