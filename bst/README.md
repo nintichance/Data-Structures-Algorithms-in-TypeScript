@@ -35,4 +35,6 @@ Binary Search Trees
 * is a graph in which the edges do not have weights or costs associated with them
 * simply represents the presence of a connection between two verties
 * applications
-    * 
+    * yo
+    * hei
+    * you
