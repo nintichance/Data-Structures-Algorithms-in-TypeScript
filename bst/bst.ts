@@ -48,6 +48,60 @@ export class BST {
         }
         return false;
     }
+
+    dfsInorder(): number[] {
+        const arr: number[] = [];
+        const recurseTree = (node: Node | null) => {
+            if (!node) return
+            recurseTree(node.left);
+            arr.push(node.value);
+            recurseTree(node.right);
+        }
+        recurseTree(this.root);
+        return arr;
+    }
+
+    dfsPreorder(): number[] {
+        const arr: number[] = [];
+        const recurseTree = (node: Node | null) => {
+            if (!node) return
+            arr.push(node.value);
+            recurseTree(node.left);
+            recurseTree(node.right);
+        }
+        recurseTree(this.root);
+        return arr;
+    }
+
+    dfsPostorder(): number[] {
+        const arr: number[] = [];
+        const recurseTree = (node: Node | null) => {
+            if (!node) return
+            recurseTree(node.left);
+            recurseTree(node.right);
+            arr.push(node.value);
+        }
+        recurseTree(this.root);
+        return arr;
+    }
+
+    bfs(): number[]{
+        const result = [];
+        const queue = [];
+        queue.push(this.root);
+
+        while(queue.length) {
+            const currentNode = queue.shift();
+            result.push(currentNode!.value);
+            if (currentNode!.left) {
+                queue.push(currentNode!.left);
+            } 
+            if(currentNode!.right){
+                queue.push(currentNode!.right);
+            }
+        }
+        return result;
+    }
 }
 
 class Node {

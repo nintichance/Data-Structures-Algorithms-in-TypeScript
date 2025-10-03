@@ -12,29 +12,30 @@ Binary Search Trees
 
 **dfsInorder**
 * left, root, right
+* returns the nodes in ascending order
+* can reverse inorder to get descending order
+
 **dfsPreorder**
 * root, left, right
+* can be used to create a copy of the tree
+can be used to get prefix expressions of an expression tree
+    * is a binary tree in which each internal node corresponds to the operator and each leaf node corresponds to the operand
+* can be used to create a mirror image of a tree
 **dfsPostorder**
 * left, right, root
+* used to delete every node of the tree
 **bfs**
 * leaf nodes of same depth, going up the tree until the root
+* can be used for zigzag traversal of the tree
+* can connect the parallel nodes of the tree
 
 **BFS**
 * traverses the tree level by level
 * uses FIFO to traverse the tree 
 * is more suitable for searching vertices closer to the given source
-* to find shortest path from a vertex *s* to a vertex *v* in an unweighted graph
+
 
 **DFS**
-* DFS traverses the tree subtree by subtree
-* DFS using LIFO to traverse the tree
-* DFS is more suitable when there are solution aways from the source
-* DFS is used to find strongly connected components
-
-**Unweighted Graph**
-* is a graph in which the edges do not have weights or costs associated with them
-* simply represents the presence of a connection between two verties
-* applications
-    * yo
-    * hei
-    * you
+* traverses the tree subtree by subtree
+* using LIFO to traverse the tree
+* is more suitable when there are solution aways from the source
