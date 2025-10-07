@@ -6,7 +6,7 @@ export class BST {
         this.root = new Node(value);
         this.size = 0;
     }
-    // 2,3,12,15,28,36,39,
+
     insert(value: number) {
         let newNode = new Node(value)
 
@@ -101,6 +101,12 @@ export class BST {
             }
         }
         return result;
+    }
+
+    kthMax(node: Node | null, k: number): number {
+        const result = this.dfsInorder()
+        const amount = result.length;
+        return result[amount - k]; 
     }
 }
 
