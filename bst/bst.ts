@@ -108,6 +108,30 @@ export class BST {
         const amount = result.length;
         return result[amount - k]; 
     }
+
+    findAncestors(node: Node | null, descendant: number) {
+        const result: number[] = [];
+        const traverse = (node: Node | null, d: number) => {
+            if (!node) return false;
+            if((traverse(node.left, d) || traverse(node.right, d)) || node.value ===d) {
+                result.push(node.value);
+                return true;
+            } 
+        }
+        traverse(this.root, descendant);
+        return result;
+    }
+
+    findHeight(): number {
+        const traverse = (node: Node | null) => {
+            if (!node) return 0;
+            const left: number = traverse(node.left) + 1;
+            const right: number = traverse(node.right) + 1;
+            return Math.max(left, right);
+        }
+
+        return traverse(this.root);
+    }
 }
 
 class Node {

@@ -68,4 +68,16 @@ describe('BST', ()=> {
         })
     })
 
+    describe('findAncestor', ()=> {
+        it ('lists the ancestors of a particular node', ()=> {
+            console.log("YO", bst.findAncestors(bst.root, 12))
+            expect(bst.findAncestors(bst.root, 12)).toEqual([12, 3, 15])
+        })
+    })
+
+    describe('findHeight', ()=> {
+        it ('returns the height of the tree', ()=> {
+            expect(bst.findHeight()).toEqual(3);
+        })
+    })
 })
