@@ -46,11 +46,11 @@
 
 **Graphs**
 
-1. Can I [Implement Adjacency List](https://github.com/nintichance/algorithms---such/blob/master/graphs/adjacencyListGraph.js) from memory
+1. Can I [Implement Adjacency List](https://github.com/nintichance/algorithms---such/blob/master/graphs/adjacencyListGraph.js) 
 2. Can I do topological sort using an adjacency list?
-2. Can I [Implement BFS](https://github.com/nintichance/algorithms---such/blob/master/graphs/bfs.js) from memory
-3. Can I [Implement DFS](https://github.com/nintichance/algorithms---such/blob/master/graphs/dfs.js) from memory
-4. Can I implement [Matrix Graph](https://github.com/nintichance/algorithms---such/blob/master/graphs/matrixGraph.js) from memory
+2. Can I [Implement BFS](https://github.com/nintichance/algorithms---such/blob/master/graphs/bfs.js) 
+3. Can I [Implement DFS](https://github.com/nintichance/algorithms---such/blob/master/graphs/dfs.js) 
+4. Can I implement [Matrix Graph](https://github.com/nintichance/algorithms---such/blob/master/graphs/matrixGraph.js) 
 5. Can I do the following problems?
 	6.  [Shortest Path on a Grid](https://github.com/nintichance/algorithms---such/blob/master/graphs/shortestPathOnAGrid.js)
 	6. [100 Seconds Graph](https://github.com/nintichance/algorithms---such/blob/master/graphs/100secondsGraph.js)
