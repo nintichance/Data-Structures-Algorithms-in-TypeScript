@@ -95,7 +95,9 @@
 9. Can I use a hash table to lower the time complexity of a problem?
 
 
+**Sorting Algorithms**
 
+* Learn two sorting algorithms and understand selection & insertion sort.
 
 **Grokking the Dynammic Programming Interview**
 
