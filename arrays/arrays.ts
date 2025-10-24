@@ -6,53 +6,19 @@ export function removeEven(arr: number[]) {
     }
     return arr;
 }
-// const nums1 = [2,4,5,9];
-// const nums2 = [3,4,6,7];
+
 export function mergeArrays(nums1: number[], nums2: number[]) {
     let result: number[] = [];
     let p1 = 0;
     let p2 = 0;
     
-    // traverse both arrays until the end of nums1 or nums2 is reached
     while (p1 < nums1.length-1 && p2 < nums2.length-1) {
-        // if the value at p1 is greater than the value at p2, place the value at p2 into p1 and increment p1 and p2
         if (nums1[p1] > nums2[p2]) {
             result.push(nums2[p2])
             p2++ 
-            /*
-
-            */
         } else {
             result.push(nums1[p1])
             p1++; 
-            /*
-            const nums1 = [2,4,5,9];
-            const nums2 = [3,4,6,7];
-            p1 = 1, p2 = 0
-            result = [2]
-            p1=1, p2 = 1
-            result = [2,3]
-            p1=2,p2=1
-            result = [2,3,4]
-            p1=2,p2=2
-            result = [2,3,4,4]
-            p1=3,p2=2
-            result = [2,3,4,4,5]
-            nums[3] = 9
-            nums[2] = 6
-            arr = [3,4,6,7]
-            arr2 = [2,4,5,9]
-            i = 2
-            i2 = 3
-            result = [2,3,4,4,5,6]
-            i = 3
-            result = [2,3,4,4,5,6,7]
-            i=4
-            arr.length = 4
-            i2 = 3, arr2[i2] = 9
-            result = [2,3,4,4,5,6,7,9]
-            */
-     
         }
     }
     nums1[p1] > nums2[p2] ? mergeRemainder(result, nums2, p2, nums1, p1) : mergeRemainder(result, nums1, p1, nums2, p2)
@@ -69,4 +35,31 @@ function mergeRemainder(result: number[], arr: number[], i: number, arr2: number
         result.push(arr2[i2]);
         i2++;
     }
+}
+
+export function mergeArraysInPlace(nums1: number[], nums2: number[]){
+    let p1 = 0;
+    let p2 = 0;
+    /*
+    const arr1 = [2,4,5,9];
+    const arr2 = [3,4,6,7];
+    p1=0,p2=0
+    nums1 = [2,3,4,5,9]
+    p1=1,p1=1
+    nums1 = [2,3,4,4,5,9]
+    p1=2,p2=2
+    nums=[2,3,4,4,5,9]
+    
+    */
+    while(p2 < nums2.length) {
+        if (nums1[p1]<nums2[p2]) {
+            nums1.splice(p1+1, 0, nums2[p2])
+            p2++
+        } else if(nums1[p1]>nums2[p2]){
+            nums1.splice(p1, 0, nums2[p2])
+            p1++
+        } 
+    }
+    console.log("YOHEI", nums1)
+    return nums1;
 }

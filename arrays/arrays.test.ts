@@ -1,4 +1,4 @@
-import { removeEven, mergeArrays } from "./arrays";
+import { removeEven, mergeArrays, mergeArraysInPlace } from "./arrays";
 
 describe('removeEven', () => {
     const arr = [1,2,3,4,5,6];
@@ -17,3 +17,11 @@ describe('mergeArrays', () => {
     })
 })
 
+describe('mergeArraysInPlace', () => {
+    const arr1 = [2,4,5,9];
+    const arr2 = [3,4,6,7];
+
+    it('merges two sorted arrays', ()=> {
+        expect(mergeArraysInPlace(arr1, arr2)).toEqual([2,3,4,4,5,6,7,9]);
+    })
+})
